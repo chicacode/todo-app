@@ -7,7 +7,8 @@
     <meta name="description" content="vanilla javascript todo app" />
     <meta name="keywords" content="HTML, CSS, Javascript" />
     <meta name="author" content="Geri" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -15,17 +16,44 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link
       rel="shortcut icon"
       type="image/jpg"
-      href="./assets/icons8-credit-card-48.png"
+      href="./assets/img/mug-saucer-solid.svg"
     />
     <title>todo-app chica</title>
   </head>
   <body>
-    <header>header</header>
+    <header>
+      <nav class="menu__app-header">
+        <ul>
+          <li><a href="#">Welcome</a></li>
+          <li><a href="#">Date</a></li>
+
+          <li>
+            <a href="#">
+              <div class="user__info">
+                <span class="user__info__img">
+                  <img
+                    class="img"
+                    src="https://i.scdn.co/image/ab67757000003b8283d6714c366d78dea378bf93"
+                    alt="Profile Picture"
+                    class="img-responsive"
+                  />
+                </span>
+
+                <span class="user__info__name">
+                  <span class="first">chicacode</span>
+                </span>
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
+      <section class="main__app-container">Progress</section>
       <section class="search__app-section">
         <form action="#">
           <div class="section__container-search">
@@ -41,24 +69,40 @@
 
           <div class="section__container-task">
             <label for="task-item"></label>
-            <input type="text" placeholder="add task" name="task-item" id="task-item">
+            <input
+              type="text"
+              placeholder="add task"
+              name="task-item"
+              id="task-item"
+            />
             <button>Add</button>
           </div>
           <div class="section__container-date-time">
             <label for="date">Start date:</label>
 
-            <input type="date">
+            <input type="date" />
             <label for="time">Time:</label>
-            <input type="time">
+            <input type="time" />
           </div>
 
           <div class="section__container-priority">
             <label for="high">High</label>
-            <input type="radio" name="priority" id="high" value="high" onchange="selectPriority(event)">
+            <input
+              type="radio"
+              name="priority"
+              id="high"
+              value="high"
+              onchange="selectPriority(event)"
+            />
 
-            
             <label for="low">Low</label>
-            <input type="radio" name="priority" id="low" value="low" onchange="selectPriority(event)">      
+            <input
+              type="radio"
+              name="priority"
+              id="low"
+              value="low"
+              onchange="selectPriority(event)"
+            />
           </div>
         </form>
       </section>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="vanilla javascript todo app" />
+    <meta name="keywords" content="HTML, CSS, Javascript" />
+    <meta name="author" content="Geri" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/icons8-credit-card-48.png"
+    />
+    <title>todo-app chica</title>
+  </head>
+  <body>
+    <header>header</header>
+    <div class="container">
+      <section class="search__app-section">
+        <form action="#">
+          <div class="section__container-search">
+            <label for="search-bar">Search task</label>
+            <input
+              type="text"
+              placeholder="search.."
+              name="search-input"
+              id="search-input"
+            />
+            <button type="button">Search</button>
+          </div>
+
+          <div class="section__container-task">
+            <label for="task-item"></label>
+            <input type="text" placeholder="add task" name="task-item" id="task-item">
+            <button>Add</button>
+          </div>
+          <div class="section__container-date-time">
+            <label for="date">Start date:</label>
+
+            <input type="date">
+            <label for="time">Time:</label>
+            <input type="time">
+          </div>
+
+          <div class="section__container-priority">
+            <label for="high">High</label>
+            <input type="radio" name="priority" id="high" value="high" onchange="selectPriority(event)">
+
+            
+            <label for="low">Low</label>
+            <input type="radio" name="priority" id="low" value="low" onchange="selectPriority(event)">      
+          </div>
+        </form>
+      </section>
+
+      <section class="task-list__app-section">
+        <ul class="task-list__app-list">
+          <li class="task-list-item">List</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

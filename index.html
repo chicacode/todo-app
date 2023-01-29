@@ -70,7 +70,7 @@
         </div>
       </section> -->
       <section class="search__app-section">
-        <form action="#">
+        <form  onsubmit="addTask(event)">
           <div class="section__container-search">
             <label for="search-bar">Search task</label>
             <div class="searchbox">
@@ -109,12 +109,12 @@
             <div class="input__date-container">
               <label for="date">Start date:</label>
 
-              <input type="date" />
+              <input type="date" onchange="setDate(event)"/>
             </div>
 
             <div class="input__date-container">
               <label for="time">Time:</label>
-              <input type="time" />
+              <input type="time" onchange="setDate(event)"/>
             </div>
           </div>
 
@@ -149,8 +149,8 @@
       </section>
 
       <section class="task-list__app-section">
-        <ul class="task-list__app-list">
-          <li class="task-list-item">List</li>
+        <ul class="todos__app-list">
+          <!-- <li class="task-list-item">List</li> -->
         </ul>
 
         <button class="button button-task-list__trash">
@@ -158,5 +158,6 @@
         </button>
       </section>
     </div>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

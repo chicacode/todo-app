@@ -106,31 +106,44 @@
             </div>
           </div>
           <div class="section__container-date-time">
-            <label for="date">Start date:</label>
+            <div class="input__date-container">
+              <label for="date">Start date:</label>
 
-            <input type="date" />
-            <label for="time">Time:</label>
-            <input type="time" />
+              <input type="date" />
+            </div>
+
+            <div class="input__date-container">
+              <label for="time">Time:</label>
+              <input type="time" />
+            </div>
           </div>
 
           <div class="section__container-priority">
-            <label for="high">High</label>
-            <input
-              type="radio"
-              name="priority"
-              id="high"
-              value="high"
-              onchange="selectPriority(event)"
-            />
+            <div class="input__container-priority">
+              <label for="high">
+     
+                High</label>
+                <input
+                type="radio"
+                name="priority"
+                id="high"
+                value="high"
+                onchange="selectPriority(event)"
+              />
+            </div>
 
-            <label for="low">Low</label>
-            <input
-              type="radio"
-              name="priority"
-              id="low"
-              value="low"
-              onchange="selectPriority(event)"
-            />
+            <div class="input__container-priority">
+              <label for="low">
+   
+                Low</label>
+                <input
+                type="radio"
+                name="priority"
+                id="low"
+                value="low"
+                onchange="selectPriority(event)"
+              />
+            </div>
           </div>
         </form>
       </section>

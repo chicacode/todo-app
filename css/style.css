@@ -80,7 +80,6 @@ a:hover {
   box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
-  /* background-color: #f6f5f5b9; */
   /* background-color: rgba(68, 115, 172, 0.55); */
   background: hsla(213, 77%, 14%, 1);
 
@@ -96,12 +95,62 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", en
 .section__container-search,
 .section__container-task,
 .section__container-date-time,
-.section__container-priority {
+.section__container-priority{
   display: flex;
   flex-direction: column;
   padding: 20px 15px;
   justify-content: center;
-  margin: 20px 15px;
+  margin: 10px 15px;
+}
+
+.input__date-container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.input__container-priority{
+  /* display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(218, 218, 218);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
 
 .searchbox {

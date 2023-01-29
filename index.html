@@ -48,7 +48,7 @@
                 <span class="user__info__img">
                   <img
                     class="img"
-                    src="https://i.scdn.co/image/ab67757000003b8283d6714c366d78dea378bf93"
+                    src="https://avatars.githubusercontent.com/u/41730319?v=4"
                     alt="Profile Picture"
                     class="img-responsive"
                   />
@@ -64,11 +64,11 @@
       </nav>
     </header>
     <div class="container">
-      <section class="main__app-container">
+      <!-- <section class="main__app-container">
         <div>
           <h2>Progress</h2>
         </div>
-      </section>
+      </section> -->
       <section class="search__app-section">
         <form action="#">
           <div class="section__container-search">
@@ -86,7 +86,9 @@
                 id="search-input"
               />
             </div>
-            <button type="button">Search</button>
+            <div class="button-container-search">
+              <button class="button" type="button">Search</button>
+            </div>
           </div>
 
           <div class="section__container-task">
@@ -97,7 +99,11 @@
               name="task-item"
               id="task-item"
             />
-            <button>Add</button>
+            <div class="button-container">
+              <button class="button-task-item__add">
+                <span class="material-symbols-outlined"> add </span>
+              </button>
+            </div>
           </div>
           <div class="section__container-date-time">
             <label for="date">Start date:</label>
@@ -134,7 +140,7 @@
           <li class="task-list-item">List</li>
         </ul>
 
-        <button class="button-task-list__trash">
+        <button class="button button-task-list__trash">
           <span class="material-symbols-outlined"> delete </span>Delete Task
         </button>
       </section>

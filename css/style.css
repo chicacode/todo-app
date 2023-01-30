@@ -7,8 +7,6 @@ body {
   font-family: "Lato", sans-serif;
   font-family: "Poppins", sans-serif;
   font-family:Arial, Helvetica, sans-serif;
-  /* background-color: rgba(172, 141, 154, 0.717); */
-  /* background-color: rgba(244, 236, 239, 0.717); */
   background-color: #e2e2e2;
 }
 
@@ -17,7 +15,7 @@ body {
   justify-content: flex-start;
   box-sizing: border-box;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2;  
 }
 
 .menu__app-header {
@@ -65,12 +63,6 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  /* padding: 10px 10px;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  gap: 1; */
   display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 0.1fr 2.2fr;
@@ -90,14 +82,12 @@ a:hover {
 }
 
 .search__app-section {
-  /* width: 75%; */
   border: 1px solid rgba(186, 183, 183, 0.705);
   padding: 40px 20px;
   border-radius: 30px;
   box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
-  /* background-color: rgba(68, 115, 172, 0.55); */
   background: hsla(213, 77%, 14%, 1);
   background: linear-gradient(
     90deg,
@@ -135,11 +125,15 @@ a:hover {
   padding: 0 5px;
 }
 
+.input__container-time{
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+  margin-top: 20px;
+
+  }
+
 .input__container-priority {
-  /* display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center; */
   display: grid;
   grid-template-columns: 3em auto;
   gap: 0.5em;
@@ -289,8 +283,6 @@ input[type="date"],
 input[type="time"] {
   background: #eae9e9;
   color: rgb(33, 30, 30);
-  padding: 10px;
-  border-radius: 20px;
   border: 0;
   width: 50%;
   box-shadow: -4px 3px 67px -16px rgba(0, 0, 0, 0.75);
@@ -299,6 +291,7 @@ input[type="time"] {
   padding: 17px;
   border-radius: 30px;
 }
+
 
 .button-task-list__trash {
   display: flex;
@@ -362,17 +355,6 @@ input[type="time"] {
   background-color: rgb(72, 187, 120, .40);
   color: #48BB78;
 }
-/* .task-list-priotity-low{
-  background-color: #fff;
-  color: #e2e2e2;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 10px 10px;
-  padding: 10px 10px;
-  font-family: "Lato", sans-serif;
-  border-radius: 30px;
-  text-transform: capitalize;
-  width: 60px;
-  text-align: center;
-
-} */
+.todolist__app-container{
+  padding-top: 10px;
+}

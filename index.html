@@ -35,12 +35,14 @@
     />
     <title>todo-app chica</title>
   </head>
+
   <body>
     <header class="header">
       <nav class="menu__app-header">
         <ul class="header__navbar-list">
-          <li class="nav__link-header-list"><a href="#">Daily Planner</a></li>
-          <li class="nav__link-header-list"><a href="#">Date</a></li>
+          <li class="nav__link-header-list-brand">
+            <a href="#">Daily Planner</a>
+          </li>
 
           <li class="nav__link-header-list">
             <a href="#">
@@ -59,6 +61,11 @@
                 </span>
               </div></a
             >
+          </li>
+          <li class="nav__link-header-list">
+            <a href="#">
+              <span id="today-date"></span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -153,15 +160,25 @@
       </div>
       <div class="todolist__app-container">
         <section class="task-list__app-section">
-          <h5 class="title-heading">Todo´s taks</h5>
+          <h5 class="title-heading">Todo´s tasks</h5>
           <ul class="todos__app-list"></ul>
 
-          <button class="button button-task-list__trash">
-            <span class="material-symbols-outlined"> delete </span>Delete Tasks
-          </button>
+          <div class="button__container-delete">
+            <button class="button button-task-list__trash">
+              <span class="material-symbols-outlined"> delete </span>Delete
+              Tasks
+            </button>
+          </div>
         </section>
       </div>
     </div>
     <script src="./script.js"></script>
+    <script>
+      let date = new Date().toDateString();
+
+      console.log("date", date);
+
+      document.getElementById("today-date").innerHTML = date;
+    </script>
   </body>
 </html>

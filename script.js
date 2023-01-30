@@ -35,22 +35,15 @@ function addTask(event) {
 
 function selectPriority(event) {
     newTask.priority = event.target.value;
-    // console.log(event.target.value); // This keyword we explain some other time
 }
 
 
 function showList() {
-    console.log("Entra en SHOWWW")
     let listContainer = document.querySelector('.todos__app-list');
     listContainer.innerHTML = ""; /// DELETE THE PREVIOUS HTML BEFORE which was there
     for (let i = 0 ; i < taskList.length ; i++ ) {
         let listItem = document.createElement('li');
 
-        // if (taskList[i].priority === "low") {
-        //     listItem.classList.add("task-list-item")
-        // }
-
-        // [ { title: "Task 1"}, { title: "Task 2"}]
 
         listItem.classList.add("task-list-item")
         // {title: "Task 1"} // for index  0 , this will taskList[0]
@@ -80,19 +73,38 @@ function showList() {
             taskList[i].priority = "low";
         }
 
+        let dateContainer = document.createElement("div");
+
         // This code shows the Completion Date
         let pDate = document.createElement('p');
         pDate.setAttribute("id", taskList[i].title);
         pDate.textContent = taskList[i].completionDate;
 
         pDate.classList.add("task-list-date");
-        listItem.appendChild(pDate);
+        dateContainer.appendChild(pDate)
+
+       
+        let pTime = document.createElement('p');
+        pTime.setAttribute("id", taskList[i].title);
+        pTime.textContent = taskList[i].completionTime;
+
+        pTime.classList.add("task-list-time");
+        dateContainer.appendChild(pTime)
+
+        dateContainer.classList.add("date-container-created")
+        
+        listItem.appendChild(dateContainer);
         listContainer.appendChild(listItem);
     }
 }
 
 function setDate(event) {
     newTask.completionDate = event.target.value;
+}
+
+function setTime(event) {
+    console.log("new time", event)
+    newTask.completionTime = event.target.value;
 }
 
 

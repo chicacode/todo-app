@@ -119,7 +119,7 @@ a:hover {
 
 .section__container-search,
 .section__container-task,
-.section__container-date-time,
+.section__container-date,
 .section__container-priority {
   display: flex;
   flex-direction: column;
@@ -128,6 +128,10 @@ a:hover {
   margin: 10px 15px;
 }
 
+.section__container-date{
+  padding: 0px 15px;
+  margin: 0px 15px;
+}
 .input__date-container {
   display: flex;
   flex-direction: column;
@@ -360,6 +364,22 @@ input[type="time"] {
 .task-list-date{
   color: #2846619c;
   font-size: 16px;
+}
+
+
+.date-container-created{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+
+.task-list-time{
+  display: flex;
+  align-items: center;
+  color: #2846619c;
+  font-size: 14px;
 }
 
 .task-list-priotity-high, .task-list-priotity-low, .task-list-priotity-medium{

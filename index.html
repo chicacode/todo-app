@@ -64,101 +64,103 @@
       </nav>
     </header>
     <div class="container">
-      <!-- <section class="main__app-container">
-        <div>
-          <h2>Progress</h2>
-        </div>
-      </section> -->
-      <section class="search__app-section">
-        <form  onsubmit="addTask(event)">
-          <div class="section__container-search">
-            <label for="search-bar">Search task</label>
-            <div class="searchbox">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path
-                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+      <div class="search__app-container">
+        <section class="search__app-section">
+          <form onsubmit="addTask(event)">
+            <div class="section__container-search">
+              <label for="search-bar">Search task</label>
+              <div class="searchbox">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  name="search-input"
+                  id="search-input"
                 />
-              </svg>
+              </div>
+              <div class="button-container-search">
+                <button class="button" type="button">Search</button>
+              </div>
+            </div>
+            <hr />
+            <div class="section__container-task">
+              <label for="task-item">Add your new task here</label>
               <input
                 type="text"
-                placeholder="Search..."
-                name="search-input"
-                id="search-input"
+                placeholder="Write a new task"
+                name="task-item"
+                id="task-item"
               />
+              <div class="button-container">
+                <button class="button-task-item__add">
+                  <span class="material-symbols-outlined"> add </span>
+                </button>
+              </div>
             </div>
-            <div class="button-container-search">
-              <button class="button" type="button">Search</button>
-            </div>
-          </div>
-<hr>
-          <div class="section__container-task">
-            <!-- <h2>Add Your New task</h2> -->
-            <label for="task-item">Add your new task here</label>
-            <input
-              type="text"
-              placeholder="Write a new task"
-              name="task-item"
-              id="task-item"
-            />
-            <div class="button-container">
-              <button class="button-task-item__add">
-                <span class="material-symbols-outlined"> add </span>
-              </button>
-            </div>
-          </div>
-          <div class="section__container-date-time">
-            <div class="input__date-container">
-              <label for="date">Start date:</label>
+            <div class="section__container-date-time">
+              <div class="input__date-container">
+                <label for="date">Start date:</label>
 
-              <input type="date" onchange="setDate(event)"/>
+                <input type="date" onchange="setDate(event)" />
+              </div>
+
+              <div class="input__date-container time">
+                <label for="time">Time:</label>
+                <input type="time" onchange="setDate(event)" />
+              </div>
             </div>
 
-            <div class="input__date-container time">
-              <label for="time">Time:</label>
-              <input type="time" onchange="setDate(event)"/>
-            </div>
-          </div>
-
-          <div class="section__container-priority">
-            <div class="input__container-priority">
-              <label for="high">
-     
-                High</label>
+            <div class="section__container-priority">
+              <div class="input__container-priority">
+                <label for="high"> High</label>
                 <input
-                type="radio"
-                name="priority"
-                id="high"
-                value="high"
-                onchange="selectPriority(event)"
-              />
-            </div>
+                  type="radio"
+                  name="priority"
+                  id="high"
+                  value="high"
+                  onchange="selectPriority(event)"
+                />
+              </div>
 
-            <div class="input__container-priority">
-              <label for="low">
-   
-                Low</label>
+              <div class="input__container-priority">
+                <label for="medium"> Medium</label>
                 <input
-                type="radio"
-                name="priority"
-                id="low"
-                value="low"
-                onchange="selectPriority(event)"
-              />
+                  type="radio"
+                  name="priority"
+                  id="medium"
+                  value="medium"
+                  onchange="selectPriority(event)"
+                />
+              </div>
+
+              <div class="input__container-priority">
+                <label for="low"> Low</label>
+                <input
+                  type="radio"
+                  name="priority"
+                  id="low"
+                  value="low"
+                  onchange="selectPriority(event)"
+                />
+              </div>
             </div>
-          </div>
-        </form>
-      </section>
+          </form>
+        </section>
+      </div>
+      <div class="todolist__app-container">
+        <section class="task-list__app-section">
+          <h5 class="title-heading">Todo´s taks</h5>
+          <ul class="todos__app-list"></ul>
 
-      <section class="task-list__app-section">
-        <h5 class="title-heading">Todo´s taks</h5>
-        <ul class="todos__app-list">
-          <!-- <li class="task-list-item">List</li> -->
-        </ul>
-
-        <button class="button button-task-list__trash">
-          <span class="material-symbols-outlined"> delete </span>Delete Tasks
-        </button>
-      </section>
+          <button class="button button-task-list__trash">
+            <span class="material-symbols-outlined"> delete </span>Delete Tasks
+          </button>
+        </section>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

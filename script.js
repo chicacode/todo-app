@@ -7,18 +7,9 @@ const deleteAllBtn = document.querySelector(".button-task-list__trash");
 
 let taskList = [];
 
-let taskListCopy=  []; // 
+let taskListCopy=  [];
 
 let newTask = {}; // By default empty; 
-
-// console.log("search", inputBox.value);
-
-// console.log("button", addBtn.value);
-
-// console.log("list", todoList);
-
-// console.log("trash", deleteAllBtn.value);
-
 
 function addTask(event) {
 
@@ -61,8 +52,6 @@ function showList() {
 
         // [ { title: "Task 1"}, { title: "Task 2"}]
 
-        console.log("que hay aqui en title", taskList[i].title)
-
         listItem.classList.add("task-list-item")
         // {title: "Task 1"} // for index  0 , this will taskList[0]
         let pTitle = document.createElement("h5");
@@ -80,13 +69,16 @@ function showList() {
         listItem.appendChild(pPriority);
 
         if (taskList[i].priority === "low") {
-            // pPriority.style.backgroundColor = "yellow";
             pPriority.classList.add("task-list-priotity-low")
+        }else if(taskList[i].priority === "medium"){
+            pPriority.classList.add("task-list-priotity-medium")
         } else {
-            // pPriority.style.backgroundColor = "red";
             pPriority.classList.add("task-list-priotity-high")
         }
         
+        if(taskList[i].priority === ""){
+            taskList[i].priority = "low";
+        }
 
         // This code shows the Completion Date
         let pDate = document.createElement('p');

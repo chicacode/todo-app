@@ -397,7 +397,7 @@ input[type="time"] {
 }
 
 .task-list-priotity-medium{
-  background-color: rgb(236, 201, 75, .40);
+  background-color: rgb(236, 201, 75, .20);
   color: #ECC94B;
 }
 

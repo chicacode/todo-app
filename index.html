@@ -81,7 +81,7 @@
               </svg>
               <input
                 type="text"
-                placeholder="search..."
+                placeholder="Search..."
                 name="search-input"
                 id="search-input"
               />
@@ -90,12 +90,13 @@
               <button class="button" type="button">Search</button>
             </div>
           </div>
-
+<hr>
           <div class="section__container-task">
-            <label for="task-item">Add task</label>
+            <!-- <h2>Add Your New task</h2> -->
+            <label for="task-item">Add your new task here</label>
             <input
               type="text"
-              placeholder="add task"
+              placeholder="Write a new task"
               name="task-item"
               id="task-item"
             />
@@ -112,7 +113,7 @@
               <input type="date" onchange="setDate(event)"/>
             </div>
 
-            <div class="input__date-container">
+            <div class="input__date-container time">
               <label for="time">Time:</label>
               <input type="time" onchange="setDate(event)"/>
             </div>
@@ -149,12 +150,13 @@
       </section>
 
       <section class="task-list__app-section">
+        <h5 class="title-heading">Todo´s taks</h5>
         <ul class="todos__app-list">
           <!-- <li class="task-list-item">List</li> -->
         </ul>
 
         <button class="button button-task-list__trash">
-          <span class="material-symbols-outlined"> delete </span>Delete Task
+          <span class="material-symbols-outlined"> delete </span>Delete Tasks
         </button>
       </section>
     </div>

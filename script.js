@@ -22,7 +22,6 @@ let newTask = {}; // By default empty;
 
 function addTask(event) {
 
-    console.log(event)
     let taskItem = document.querySelector("#task-item");
     event.preventDefault();
 
@@ -44,35 +43,32 @@ function addTask(event) {
 }
 
 function selectPriority(event) {
-    // newTask = {} , newtask = { priority: "high"}
     newTask.priority = event.target.value;
     // console.log(event.target.value); // This keyword we explain some other time
 }
 
 
 function showList() {
+    console.log("Entra en SHOWWW")
     let listContainer = document.querySelector('.todos__app-list');
     listContainer.innerHTML = ""; /// DELETE THE PREVIOUS HTML BEFORE which was there
     for (let i = 0 ; i < taskList.length ; i++ ) {
         let listItem = document.createElement('li');
 
-        if (taskList[i].priority === "low") {
-            listItem.style.background = "#118ab2";
-            listItem.style.color = "black";
-        }
+        // if (taskList[i].priority === "low") {
+        //     listItem.classList.add("task-list-item")
+        // }
 
         // [ { title: "Task 1"}, { title: "Task 2"}]
 
+        console.log("que hay aqui en title", taskList[i].title)
 
+        listItem.classList.add("task-list-item")
         // {title: "Task 1"} // for index  0 , this will taskList[0]
-        let pTitle = document.createElement("p");
-
+        let pTitle = document.createElement("h5");
         // This code shows the TITLE
         pTitle.textContent = taskList[i].title;
-        pTitle.style.fontSize = "24px";
-        pTitle.style.margin = "2px";
-        pTitle.style.fontWeight = "bold";
-        pTitle.style.color = "black";
+        pTitle.classList.add("task-list-title");
 
         listItem.appendChild(pTitle);
 
@@ -84,18 +80,21 @@ function showList() {
         listItem.appendChild(pPriority);
 
         if (taskList[i].priority === "low") {
-            pPriority.style.backgroundColor = "yellow";
+            // pPriority.style.backgroundColor = "yellow";
+            pPriority.classList.add("task-list-priotity-low")
         } else {
-            pPriority.style.backgroundColor = "red";
+            // pPriority.style.backgroundColor = "red";
+            pPriority.classList.add("task-list-priotity-high")
         }
         
 
         // This code shows the Completion Date
-        let p = document.createElement('p');
-        p.setAttribute("id", taskList[i].title);
-        p.textContent = taskList[i].completionDate;
+        let pDate = document.createElement('p');
+        pDate.setAttribute("id", taskList[i].title);
+        pDate.textContent = taskList[i].completionDate;
 
-        listItem.appendChild(p);
+        pDate.classList.add("task-list-date");
+        listItem.appendChild(pDate);
         listContainer.appendChild(listItem);
     }
 }
